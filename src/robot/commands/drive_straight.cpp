@@ -3,13 +3,13 @@
 #include "../subsystems/subsystems.hpp"
 #include <WPILib.h>
 
-Drive_Straight::Drive_Straight() :
+Drive_Straight::Drive_Straight(float speed) :
 speed(speed) {
 	Requires(Subsystems::drive_base);
 }
 
 void Drive_Straight::Initialize() {
-	Subsystems::drive_base->set_motors_normalized( 0.0, 0.0 ); //replace these with real numbers
+	Subsystems::drive_base->set_motors_normalized( 0.5, 0.5 ); //replace these with real numbers
 }
 
 bool Drive_Straight::IsFinished() {

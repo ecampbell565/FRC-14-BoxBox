@@ -8,6 +8,7 @@ class Drive_Straight : public Command {
 public:
 	Drive_Straight(float speed);
 	void Initialize();
+	void Execute() {};
 	bool IsFinished();
 	void End();
 	void Interrupted();

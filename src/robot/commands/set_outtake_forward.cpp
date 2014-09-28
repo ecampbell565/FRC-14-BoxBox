@@ -8,13 +8,13 @@ Set_Outtake_Forward::Set_Outtake_Forward() {
 }
 
 void Set_Outtake_Forward::Execute() {
-	Subsystems::outtake->set_normalized( 0.0, 0.0 ); //replace these with real numbers
+	Subsystems::outtake->set_normalized( 1.0 );
 }
 
 bool Set_Outtake_Forward::IsFinished() {
-	return true
+	return true;
 }
 
 void Set_Outtake_Forward::End() {
-	Subsystems::outtake->set_normalized( 0.0, 0.0 );
+	Subsystems::outtake->set_normalized( 0.0 );
 }
