@@ -17,6 +17,7 @@ private:
 		  *right_motor_1,
 		  *right_motor_2,
 		  *right_motor_3;
+	bool do_stuff;
 	float constrain(float input);
 };
 

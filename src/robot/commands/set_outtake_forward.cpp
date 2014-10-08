@@ -12,9 +12,9 @@ void Set_Outtake_Forward::Execute() {
 }
 
 bool Set_Outtake_Forward::IsFinished() {
-	return true;
+	return false;
 }
 
-void Set_Outtake_Forward::End() {
+void Set_Outtake_Forward::Interrupted() {
 	Subsystems::outtake->set_normalized( 0.0 );
 }

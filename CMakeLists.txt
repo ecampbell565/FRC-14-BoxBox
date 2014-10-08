@@ -28,4 +28,4 @@ set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -pedantic -Wextra -O0 
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Wall -pedantic -Wextra -Werror -O3" )
 
 get_property(EXECUTABLE_LOCATION TARGET frc-14.out PROPERTY LOCATION)
-add_make_deploy(${EXECUTABLE_LOCATION} 10.4.22.2)
+add_make_deploy(${EXECUTABLE_LOCATION} 10.84.22.2)

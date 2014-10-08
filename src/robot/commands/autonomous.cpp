@@ -3,7 +3,7 @@
 #include "drive_straight.hpp"
 
 Autonomous::Autonomous() {
-	AddSequential( new Drive_Straight(0), 4 );
+	AddSequential( new Drive_Straight(0.25), 4 );
 	AddSequential( new WaitCommand(1) );
-	AddSequential( new Set_Outtake_Forward() );
+	AddSequential( new Set_Outtake_Forward(), 4 );
 }

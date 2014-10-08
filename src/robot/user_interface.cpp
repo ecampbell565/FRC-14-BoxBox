@@ -11,8 +11,8 @@ JoystickButton *UI::Primary_Driver::outtake_backward_button = 0;
 
 void UI::initialize() {	
 	Primary_Driver::outtake_forward_button = new JoystickButton(Primary_Driver::left_stick, 1);
-	Primary_Driver::outtake_backward_button = new JoystickButton(Primary_Driver::right_stick, 2);
+	Primary_Driver::outtake_backward_button = new JoystickButton(Primary_Driver::right_stick, 1);
 
-	Primary_Driver::outtake_forward_button->ToggleWhenPressed( new Set_Outtake_Forward() );
-	Primary_Driver::outtake_backward_button->ToggleWhenPressed( new Set_Outtake_Backward() );
+	Primary_Driver::outtake_forward_button->WhileHeld( new Set_Outtake_Forward() );
+	Primary_Driver::outtake_backward_button->WhileHeld( new Set_Outtake_Backward() );
 }

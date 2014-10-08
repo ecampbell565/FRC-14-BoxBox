@@ -8,13 +8,13 @@ Set_Outtake_Backward::Set_Outtake_Backward() {
 }
 
 void Set_Outtake_Backward::Execute() {
-	Subsystems::outtake->set_normalized( 1.0 ); 
+	Subsystems::outtake->set_normalized( -1.0 );
 }
 
 bool Set_Outtake_Backward::IsFinished() {
-	return true;
+	return false;
 }
 
-void Set_Outtake_Backward::End() {
+void Set_Outtake_Backward::Interrupted() {
 	Subsystems::outtake->set_normalized( 0.0 );
 }

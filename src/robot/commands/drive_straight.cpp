@@ -9,11 +9,11 @@ speed(speed) {
 }
 
 void Drive_Straight::Initialize() {
-	Subsystems::drive_base->set_motors_normalized( 0.5, 0.5 ); //replace these with real numbers
+	Subsystems::drive_base->set_motors_normalized( -speed, speed );
 }
 
 bool Drive_Straight::IsFinished() {
-	return true;
+	return false;
 }
 
 void Drive_Straight::End() {

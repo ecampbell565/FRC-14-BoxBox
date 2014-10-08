@@ -10,8 +10,8 @@ left_motor_2( new Talon(Ports::Digital_Channels::DRIVE_MOTOR_LEFT_2) ),
 left_motor_3( new Talon(Ports::Digital_Channels::DRIVE_MOTOR_LEFT_3) ),
 right_motor_1( new Talon(Ports::Digital_Channels::DRIVE_MOTOR_RIGHT_1) ),
 right_motor_2( new Talon(Ports::Digital_Channels::DRIVE_MOTOR_RIGHT_2) ),
-right_motor_3( new Talon(Ports::Digital_Channels::DRIVE_MOTOR_RIGHT_3) ) {
-}
+right_motor_3( new Talon(Ports::Digital_Channels::DRIVE_MOTOR_RIGHT_3) ),
+do_stuff(false){}//yolo
 
 void Drive_Base::InitDefaultCommand() {
 	SetDefaultCommand( new Tank_Drive() );
@@ -33,6 +33,5 @@ float Drive_Base::constrain(float input) {
 	else if(input < -0.85) {
 		input = -0.85;
 	}
-
 	return input;
 }
